@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block data %}
+    <h2>{{data.title}}</h2>
+    views: {{data.view_count}}
+    live_count :{{ live_count }}
+    <br>
+    <hr>
+    <div class="row-8">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <div class="card">
+                {{data.content}} 
+        </div>
+    </div>
+    </div>
+{% endblock %}

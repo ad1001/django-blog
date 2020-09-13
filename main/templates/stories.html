@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block data %}
+        <h2>Stories:</h2>
+        <br>
+        <hr>
+        {% for blog in stories %}
+            <li>
+                <a href="{% url 'story' blog.id %}">{{blog.title}}</a> 
+            </li>
+                
+            <br>
+                {{blog.meta}}
+
+        {% endfor %}
+
+{% endblock %}
